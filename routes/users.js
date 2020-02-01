@@ -184,7 +184,7 @@ router.post("/editStudentReg/:id", (req, res) => {
           con.rollback();
           throw error;
         } else {
-          req.flash("success_msg", "Student Info edited Successfully!");
+          req.flash("success_msg", "Student Info Edited Successfully!");
           res.redirect("/users/home");
         }
       }

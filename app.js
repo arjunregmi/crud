@@ -3,6 +3,7 @@ const passport = require("passport");
 const flash = require("connect-flash");
 const session = require("express-session");
 var fileupload = require("express-fileupload");
+const path = require("path");
 
 const app = express();
 
@@ -70,6 +71,13 @@ app.use(function(req, res, next) {
 
 app.use("/", routes);
 app.use("/users", users);
+
+// app.use((req, res, next) => {
+//   res.status(404).sendFile(path.join(__dirname, "views", "404.hbs"));
+// });
+app.use((req, res, next) => {
+  res.status(404).render("404.hbs", { layout: "anotherLay" });
+});
 
 const PORT = process.env.PORT || 4000;
 
