@@ -1,0 +1,30 @@
+<div class="container mt-3">
+    <div>
+        <center>
+            <h1>{{results.firstname}} {{results.middlename}} {{results.lastname}}</h1>
+        </center>
+
+        <div class="row">
+            <div class="col-md-12">
+                <center><img src="/uploads/{{results.image}}" class="img-fluid" alt="Responsive image" height="50%"
+                        width="50%" /></center>
+            </div>
+            <div class="col-lg-12">
+                <center>
+
+                    <label>{{results.firstname}} {{results.middlename}} {{results.lastname}}</label><br>
+                    <label>{{results.email}}</label><br>
+                    <label>{{results.address}}</label><br>
+                    <label>{{results.college}}</label><br>
+                    <label>{{results.faculty}}</label>
+
+                </center>
+
+                <center>
+                    <a class="btn btn-lg btn-outline-success mr-4" href="/users/editStudentReg/{{results.id}}">Edit</a>
+                    <a class="btn btn-lg btn-outline-danger" href="/users/deleteStudentReg/{{results.id}}">Delete</a>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>

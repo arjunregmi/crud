@@ -1,0 +1,34 @@
+<div class="container mt-5 p-3" style="border:3px solid black;">
+    <center>
+        <h2>Update Student Info</h2>
+    </center>
+    <form method="POST" action="/users/editStudentReg/{{results.id}}" enctype="multipart/form-data">
+        <label>First Name</label>
+        <input class="form-control" type="text" name="firstname" value="{{results.firstname}}" required>
+
+        <label>Middle Name</label>
+        <input class="form-control" type="text" name="middlename" value="{{results.middlename}}">
+
+        <label>Last Name</label>
+        <input class="form-control" type="text" name="lastname" value="{{results.lastname}}" required>
+
+        <label>Email</label>
+        <input class="form-control" type="text" name="email" value="{{results.email}}" required>
+
+        <label>Address</label>
+        <input class="form-control" type="text" name="address" value="{{results.address}}" required>
+
+        <label>College</label>
+        <input class="form-control" type="text" name="college" value="{{results.college}}" required>
+
+        <label>Faculty</label>
+        <input class="form-control" type="text" name="faculty" value="{{results.faculty}}" required>
+
+        <label>Image:</label>
+        <input class="form-control" type="file" name="image" value="{{results.image}}" required>
+
+
+
+        <center><button type="submit" class="btn btn-primary mt-1">Update</button></center>
+    </form>
+</div>
